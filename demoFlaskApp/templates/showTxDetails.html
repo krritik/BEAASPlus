@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+    <p>Transaction details</p>
+
+    {% for i in range( txns | count ) %}
+        <table class="table table-bordered table-active border-4 border-dark">
+            <tr><td> Transaction </td>  <td class="text-left"> {{ i+1 }}</td></tr>
+            {% for key, value in txns[i].items() %}
+                {% if key == "inputData" %} 
+                    <tr > <td>{{ key }}</td> <td>
+                        <table class="table table-bordered table-active border-4 border-dark bg-warning">
+                            {% for inputKey, inputValue  in value.items() %}
+                                <tr class="table-active"><td class="text-left">{{ inputKey }}</td> <td class="text-left"> {{ inputValue }}</td></tr> 
+                            {% endfor %}   
+                        </table>
+                    </td></tr>
+                {% else %}
+                    <tr> <td>{{ key }}</td> <td class="text-left">{{ value }}</td></tr>
+                {% endif %}
+            {% endfor %}
+            <tr><td><a href="/showUniqueTx/{{txns[i]['txHash']}}" class="btn btn-primary">More Details</a></td></tr>
+        </table>
+        <br>  
+    {% endfor %}   
+
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+	<h3>Verify Rule User Attribute Value Pair</h3>
+	<br>
+	<form action="{{ url_for('verifyRuleUser') }}" method="post"> 
+		<div class="row justify-content-center mt-4">
+			<div class="col-sm-1">No of txns to check</div>	
+			<div class="col-sm-2"><input type="text" name="txCnt" placeholder="optional"></div>
+		</div>
+		<div class="row justify-content-center mt-4">
+			<div class="col-sm-1">No of blocks to check</div>	
+			<div class="col-sm-2"><input type="text" name="noOfBlocks" placeholder="optional"></div>
+		</div>
+		<div class="row justify-content-center mt-4">
+			<div class="col-sm-1 form_label">Check till date</div>	
+			<div class="col-sm-2"><input type="text" name="date" placeholder="optional [YYYY-MM-DD ]"></div>
+		</div>
+		<br><br>
+
+		<div class="row justify-content-center mt-4">
+			<div class="col-sm-1 form_label">RuleId</div>	
+			<div class="col-sm-2"><input type="text" name="ruleId"></div>
+		</div>
+		<div class="row justify-content-center mt-4">
+			<div class="col-md-auto form_label">Attribute Name</div>	
+			<div class="col-md-auto form_label">Attribute Value</div>
+		</div>
+		<div class="row justify-content-center mt-4">
+			<div class="col-md-auto"><input type="text" name="attr1"></div>	
+			<div class="col-md-auto"><input type="text" name="value1"></div>
+		</div>
+		<div class="row justify-content-center mt-4">
+			<div class="col-md-auto"><input type="text" name="attr2" placeholder="optional"></div>	
+			<div class="col-md-auto"><input type="text" name="value2" placeholder="optional"></div>
+		</div>
+		<div class="row justify-content-center mt-4">
+			<div class="col-md-auto"><input type="text" name="attr3" placeholder="optional"></div>	
+			<div class="col-md-auto"><input type="text" name="value3" placeholder="optional"></div>
+		</div>
+		<div class="row justify-content-center mt-4">
+			<div class="col-md-auto"><input type="text" name="attr4" placeholder="optional"></div>	
+			<div class="col-md-auto"><input type="text" name="value4" placeholder="optional"></div>
+		</div>
+		<div class="row justify-content-center mt-4">
+			<div class="col-md-auto"><input type="text" name="attr5" placeholder="optional"></div>	
+			<div class="col-md-auto"><input type="text" name="value5" placeholder="optional"></div>
+		</div>
+		<div class="row justify-content-center mt-4">
+			<div class="col-sm-2"><input type="submit" value="Submit" class="btn btn-primary"></div>
+		</div>
+	</form>	
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+	<h3>Create User Attribute Possible Values</h3>
+	<br>
+	<form action="{{ url_for('createUserAttrValues') }}" method="post"> 
+		<div class="row justify-content-center mt-4">
+			<div class="col-sm-1 form_label">Attribute</div>	
+			<div class="col-sm-2">
+				<select type="text" name="attr">
+					{% for userAttr in userAttrs %}
+						<option value="{{ userAttr }}"> {{ userAttr }}</option>
+					{% endfor %}
+				</select>
+			</div>
+		</div>
+		<div class="row justify-content-center mt-4">
+			<div class="col-sm-1 form_label">Value1</div>	
+			<div class="col-sm-2" ><input type="text" name="value1"></div>
+		</div>
+		<div class="row justify-content-center mt-4">
+			<div class="col-sm-1 form_label">Value2</div>	
+			<div class="col-sm-2"><input type="text" name="value2" placeholder="optional"></div>
+		</div>
+		<div class="row justify-content-center mt-4">
+			<div class="col-sm-1 form_label">Value3</div>	
+			<div class="col-sm-2"><input type="text" name="value3" placeholder="optional"></div>
+		</div>
+		<div class="row justify-content-center mt-4">
+			<div class="col-sm-1 form_label">Value4</div>	
+			<div class="col-sm-2"><input type="text" name="value4" placeholder="optional"></div>
+		</div>
+		<div class="row justify-content-center mt-4">
+			<div class="col-sm-2 text-center"><input type="submit" value="Submit" class="btn btn-primary"></div>
+		</div>
+	</form>
+{% endblock %}	

@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+	<h3>Enter ABAC Components</h3>
+	
+	<p> Users </p>
+	<a href="/createUsers" class="btn btn-primary"> Create Users </a>
+	<a href="/createUserAttributes" class="btn btn-primary"> Create User Attributes </a>
+	<a href="/createUserAttributePosValues" class="btn btn-primary"> Create User Attribute Pos Values </a>
+	<a href="/createUserAttributeValuePair" class="btn btn-primary"> Create User Attribute Value Pair </a>
+	
+	<br>
+	<p> Objects </p>
+	<a href="/createObjects" class="btn btn-primary"> Create Objects </a>
+	<a href="/createObjectAttributes" class="btn btn-primary"> Create Object Attributes </a>
+	<a href="/createObjectAttributePosValues" class="btn btn-primary"> Create Object Attribute Pos Values </a>
+	<a href="/createObjectAttributeValuePair" class="btn btn-primary"> Create Object Attribute Value Pair </a>
+	
+	<br>
+	<p> Rules </p>
+	<a href="/createOperations" class="btn btn-primary"> Create Operations </a>
+	<a href="/createRules" class="btn btn-primary"> Create Rules </a>
+	<a href="/createRuleAttributeValuePair" class="btn btn-primary"> Create Rules Attribute Value Pair</a>
+	
+	<br><br>
+	<h3> Verify Transactions in blockchain</h3>
+	
+	<p> Verify Users</p>
+	<a href="/verifyUsers" class="btn btn-primary"> Verify Users</a>
+	<a href="/verifyUserAttributes" class="btn btn-primary">Verify User Attributes</a>
+	<a href="/verifyUserAttributePosValues" class="btn btn-primary">Verify User Attribute Possible Values</a>
+	<a href="/verifyUserAttributeValuePair" class="btn btn-primary">Verify User Attribute Value Pairs</a>
+	<br>
+	
+	<p> Verify Objects </p>
+	<a href="/verifyObjects" class="btn btn-primary"> Verify Objects</a>
+	<a href="/verifyObjectAttributes" class="btn btn-primary">Verify Object Attributes</a>
+	<a href="/verifyObjectAttributePosValues" class="btn btn-primary">Verify Object Attribute Possible Values</a>
+	<a href="/verifyObjectAttributeValuePair" class="btn btn-primary">Verify Object Attribute Value Pairs</a>
+	<br>
+	
+	<p> Verify Rules </p>
+	<a href="/verifyOperations" class="btn btn-primary"> Verify Operations</a>
+	<a href="/verifyRules" class="btn btn-primary"> Verify Rules</a>
+	<a href="/verifyRuleUser" class="btn btn-primary"> Verify Rule User Attribute Value Pairs</a>
+	<a href="/verifyRuleObject" class="btn btn-primary"> Verify Rule Object Attribute Value Pairs</a>
+	<a href="/verifyRuleOperation" class="btn btn-primary"> Verify Rule Operation Value</a>
+	
+{% endblock %}

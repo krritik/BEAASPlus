@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+	<h3>Create Rules Attribute Value Pairs</h3>
+	<br>
+	<form action="{{ url_for('createRuleAttributeValuePair') }}" method="post"> 
+		<div class="row justify-content-center mt-4">
+			<div class="col-sm-1 form_label">ruleId</div>	
+			<div class="col-sm-2">
+				<select type="text" name="ruleId">
+                    {% for rule in rules %}
+                        <option value="{{ rule }}"> {{ rule }}</option>
+                    {% endfor %}
+                </select>
+			</div>
+        </div>
+        <div class="row justify-content-center mt-4">
+			<div class="col-sm-1 form_label">operation</div>	
+			<div class="col-sm-2">
+				<select type="text" name="operation">
+                    <option value=""> None</option>
+                    {% for operation in operations %}
+                        <option value="{{ operation }}"> {{ operation }}</option>
+                    {% endfor %}
+                </select>
+			</div>
+        </div>
+        {% for userAttr, userValues in userAttrValueOptions.items() %}
+        <div class="row justify-content-center mt-4">
+			<div class="col-sm-1 form_label">{{ userAttr }}</div>	
+            <div class="col-sm-2">
+                <select type="text" name="{{ userAttr }}">
+                    <option value=""> None</option>
+                    {% for value in userValues %}
+                        <option value="{{ value }}"> {{ value }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+		</div>
+        {% endfor %}
+        {% for objectAttr, objectValues in objectAttrValueOptions.items() %}
+        <div class="row justify-content-center mt-4">
+			<div class="col-sm-1 form_label">{{ objectAttr }}</div>	
+            <div class="col-sm-2">
+                <select type="text" name="{{ objectAttr }}">
+                    <option value=""> None</option>
+                    {% for value in objectValues %}
+                        <option value="{{ value }}"> {{ value }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+		</div>
+        {% endfor %}
+        
+		<div class="row justify-content-center mt-4">
+			<div class="col-sm-2"><input type="submit" value="Submit" class="btn btn-primary"></div>
+		</div>
+	</form>
+{% endblock %}

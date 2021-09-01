@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+	<h3>Create Rules</h3>
+	<br>
+	<form action="{{ url_for('createRules') }}" method="post"> 
+		<div class="row justify-content-center mt-4">
+			<div class="col-sm-1 form_label">Rule1</div>	
+			<div class="col-sm-2"><input type="text" name="rule1"></div>
+		</div>
+		<div class="row justify-content-center mt-4">
+			<div class="col-sm-1 form_label">Rule2</div>	
+			<div class="col-sm-2"><input type="text" name="rule2" placeholder="optional"></div>
+		</div>
+		<div class="row justify-content-center mt-4">
+			<div class="col-sm-1 form_label">Rule3</div>	
+			<div class="col-sm-2"><input type="text" name="rule3" placeholder="optional"></div>
+		</div>
+		<div class="row justify-content-center mt-4">
+			<div class="col-sm-1 form_label">Rule4</div>	
+			<div class="col-sm-2"><input type="text" name="rule4" placeholder="optional"></div>
+		</div>
+		<div class="row justify-content-center mt-4">
+			<div class="col-sm-2"><input type="submit" value="Submit" class="btn btn-primary"></div>
+		</div>
+	</form>	
+
+{% endblock %}

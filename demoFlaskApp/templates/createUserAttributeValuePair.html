@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+	<h3>Create User Attribute Value Pair</h3>
+	<br>
+	<form action="{{ url_for('createUserAttributeValuePair') }}" method="post"> 
+		<div class="row justify-content-center mt-4">
+			<div class="col-sm-1 form_label">userId</div>	
+			<div class="col-sm-2">
+				<select type="text" name="userId">
+                    {% for user in users %}
+                        <option value="{{ user }}"> {{ user }}</option>
+                    {% endfor %}
+                </select>
+			</div>
+        </div>
+        {% for attr, values in attrValueOptions.items() %}
+        <div class="row justify-content-center mt-4">
+			<div class="col-sm-1 form_label">{{ attr }}</div>	
+            <div class="col-sm-2">
+                <select type="text" name="{{ attr }}">
+                    <option value=""> None</option>
+                    {% for value in values %}
+                        <option value="{{ value }}"> {{ value }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+		</div>
+        {% endfor %}
+        
+		<div class="row justify-content-center mt-4">
+			<div class="col-sm-2"><input type="submit" value="Submit" class="btn btn-primary"></div>
+		</div>
+	</form>
+{% endblock %}	

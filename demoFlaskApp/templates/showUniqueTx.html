@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+    <p>Transaction Hash  : {{ txHash  }} </p>
+    <p>Transaction details</p>
+    <table class="table table-bordered table-active border-4 border-dark">
+        {% for key, value in txDetails.items() %}
+            <tr> <td>{{ key }}</td> <td class="text-left">{{ value }}</td></tr>
+        {% endfor %}
+    </table>
+    <p>Transaction Receipt</p>  
+    <table class="table table-bordered table-active border-4 border-dark">
+        {% for key, value in txReceipt.items() %}
+            <tr> <td>{{ key }}</td> <td class="text-left">{{ value }}</td></tr>
+        {% endfor %}
+    </table> 
+{% endblock %}
