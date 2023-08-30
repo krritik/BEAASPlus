@@ -10,3 +10,13 @@ TestPyPI Link - https://test.pypi.org/project/BEAASPlus/
 
 ### demoFlaskApp
 This folder contains the demo flask app for implementing and verifying the prototype implementation. One can install the dependencies using the requirements.txt in the folder and run it locally to test it. Some of the configurations need to be updated such as a sql-database information for ABAC components, ethereum rinkeby externally owned address with and its private key for making transactions on blockchain.
+
+## Publications
+I have two papers published based on this project -
+1) ”BEAAS: Blockchain Enabled Attribute-Based Access Control as a Service”, Ritik Kumar, Balaji Palanisamy and Shamik
+Sural, 2021 IEEE International Conference on Blockchain and Cryptocurrency (ICBC), Sydney, Australia, 2021, pp. 1-3.
+Paper link - https://ieeexplore.ieee.org/abstract/document/9461151/
+2) ”Efficient Blockchain Enabled Attribute-based Access Control as a Service”, Ritik Kumar, Balaji Palanisamy and Shamik
+Sural, 2022 IEEE 4th International Conference on Trust, Privacy and Security in Intelligent Systems, and Applications
+(TPS-ISA), Atlanta, GA, USA, 2022, pp. 87-96.
+Paper link - https://ieeexplore.ieee.org/abstract/document/10063513
